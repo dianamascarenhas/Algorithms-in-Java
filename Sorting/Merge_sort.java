@@ -103,4 +103,4 @@ class Merge_Sort
 		printArray(arr);
 	}
 }
-/* This code is contributed by Rajat Mishra */
+
