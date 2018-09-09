@@ -1,5 +1,4 @@
-package Practice;
-
+package YourCode;
 public class NaiveStringMatching 
 {
 		public static void search(String txt, String pat)
