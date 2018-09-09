@@ -1,0 +1,39 @@
+package Practice;
+
+public class NaiveStringMatching 
+{
+		public static void search(String txt, String pat)
+		{
+			int M = pat.length();
+			System.out.println("Pattern Length "+M);
+			int N = txt.length();
+			System.out.println("String length "+N);
+			int i;
+		
+			for(i=0;i<N-M;i++)
+		{
+			int j;
+			for(j=0;j<M;j++)
+			{
+				//If characters don't match, break, and increment i
+				//If characters match, only increment j, and compare i from the same starting position
+				
+				if(txt.charAt(i+j) != pat.charAt(j))
+				{
+					break;
+				}
+			}
+			if(j==M)
+			{
+				System.out.println("The Pattern found at index location :"+i);
+			}	
+		}
+		}
+		public static void main(String[] args)
+		{
+			String txt = "AABAACAABAD";
+			String pat = "AABAE";
+			search(txt, pat);
+		}
+	}
+
