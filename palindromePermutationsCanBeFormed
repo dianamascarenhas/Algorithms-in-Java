@@ -1,0 +1,48 @@
+/*Given a string, we can find if it's permutation will be a palindrome or not*/
+
+/*Refer to this: https://leetcode.com/articles/palindrome-permutation
+
+ Author: Diana Mascarenhas
+ Date: 14th MAY, 2018*/
+
+import java.util.Scanner;
+
+public class palindromePermutationsCanBeFormed 
+{
+	public static void main(String args[])
+	{
+		String first;
+		boolean result;
+	System.out.println("Enter the string to be checked:");	
+	Scanner sc= new Scanner(System.in);	
+	first = sc.next();
+	result = permute(first);
+	if(result)
+	{
+	System.out.println("Palindrome Permutations can be formed");
+	}
+	else
+	{
+	System.out.println("Palindrome Permutations cannot be formed");	
+	}
+
+}
+	static boolean permute(String s)
+	{
+		int count = 0;
+		for(int i=0;i<128 && count<=1;i++)
+		{
+			int ct=0;
+			for(int j=0;j<s.length();j++)
+			{
+				if(s.charAt(j)==i)
+				{
+					ct++;
+				}
+			}
+			count+=ct%2;
+		}
+		return count<=1;
+		
+	}
+	}
