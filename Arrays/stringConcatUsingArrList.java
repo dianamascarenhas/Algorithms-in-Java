@@ -5,7 +5,7 @@ package chp1Arrays$Strings;
 
 import java.util.ArrayList;
 
-public class stringConcatArrList {
+public class stringConcatUsingArrList {
 	public static void main(String args[])
 	{
 		String arr1[] = {"Ed Sheeran", "Camilla"};
